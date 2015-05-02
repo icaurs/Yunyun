@@ -1,7 +1,9 @@
 package com.icarus.yunyun.fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.TypedArray;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
@@ -15,6 +17,8 @@ import com.icarus.yunyun.ObsBaseActivity;
 import com.icarus.yunyun.R;
 import com.icarus.yunyun.adapter.SimpleHeaderRecyclerAdapter;
 import com.icarus.yunyun.adapter.SimpleRecyclerAdapter;
+import com.lidroid.xutils.BitmapUtils;
+import com.lidroid.xutils.HttpUtils;
 
 import java.util.ArrayList;
 
@@ -22,6 +26,20 @@ import java.util.ArrayList;
  * Created by user on 2015-05-02.
  */
 public class ObsBaseFragment extends Fragment {
+
+    public BitmapUtils bitmapUtils;
+
+    public HttpUtils httpUtils;
+
+    public Intent intent;
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        bitmapUtils = new BitmapUtils(getActivity());
+        httpUtils = new HttpUtils();
+    }
 
     public static ArrayList<String> getDummyData() {
         return ObsBaseActivity.getDummyData();

@@ -256,13 +256,12 @@ public class UserActivity extends ObsBaseActivity implements ObservableScrollVie
         @Override
         protected Fragment createItem(int position) {
             Fragment f;
-            final int pattern = position % 5;
             switch (position) {
                 case 0:
                     f = new UserIntroFragment();
                     break;
                 case 1:
-                    f = new ViewPagerTab2ListViewFragment();
+                    f = new ViewPagerTab2RecyclerViewFragment();
                     break;
                 case 2:
                     f = new ViewPagerTab2RecyclerViewFragment();
