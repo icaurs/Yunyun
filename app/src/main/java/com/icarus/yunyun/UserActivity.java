@@ -24,8 +24,7 @@ import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
 import com.github.ksoichiro.android.observablescrollview.Scrollable;
 import com.github.ksoichiro.android.observablescrollview.TouchInterceptionFrameLayout;
 import com.icarus.yunyun.fragment.ViewPagerTab2GridViewFragment;
-import com.icarus.yunyun.fragment.ViewPagerTab2ListViewFragment;
-import com.icarus.yunyun.fragment.ViewPagerTab2RecyclerViewFragment;
+import com.icarus.yunyun.fragment.UserArticleFragment;
 import com.icarus.yunyun.fragment.UserIntroFragment;
 import com.icarus.yunyun.fragment.ViewPagerTab2WebViewFragment;
 import com.icarus.yunyun.util.Utils;
@@ -261,10 +260,10 @@ public class UserActivity extends ObsBaseActivity implements ObservableScrollVie
                     f = new UserIntroFragment();
                     break;
                 case 1:
-                    f = new ViewPagerTab2RecyclerViewFragment();
+                    f = new UserArticleFragment();
                     break;
                 case 2:
-                    f = new ViewPagerTab2RecyclerViewFragment();
+                    f = new UserArticleFragment();
                     break;
                 case 3:
                     f = new ViewPagerTab2GridViewFragment();

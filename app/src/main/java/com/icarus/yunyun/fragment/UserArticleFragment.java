@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * Created by user on 2015-05-02.
  */
-public class ViewPagerTab2RecyclerViewFragment extends ObsBaseFragment {
+public class UserArticleFragment extends ObsBaseFragment {
 
     private ObservableRecyclerView rv;
 
@@ -61,7 +61,7 @@ public class ViewPagerTab2RecyclerViewFragment extends ObsBaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_recyclerview, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_user_article, container, false);
 
         rv = (ObservableRecyclerView) rootView.findViewById(R.id.scroll);
         wheel = (ProgressWheel) rootView.findViewById(R.id.progress_wheel);

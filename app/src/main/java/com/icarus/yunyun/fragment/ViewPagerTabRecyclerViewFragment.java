@@ -21,7 +21,7 @@ public class ViewPagerTabRecyclerViewFragment extends ObsBaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_recyclerview, container, false);
+        View view = inflater.inflate(R.layout.fragment_user_article, container, false);
 
         Activity parentActivity = getActivity();
         final ObservableRecyclerView recyclerView = (ObservableRecyclerView) view.findViewById(R.id.scroll);
