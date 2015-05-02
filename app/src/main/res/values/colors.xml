@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="no">#00000000</color>
+    <color name="no_white">#00FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark">#FF222222</color>
+    <color name="light">#FFEEEEEE</color>
+    <color name="image_bg">#A4A4A4</color>
+    <color name="navigation_bg">#201208</color>
+    <color name="bg">#E5E5E5</color>
+    <color name="list_item_layer">#05000000</color>
+    <color name="pagertabstrip_bg">#F5F5F5</color>
+    <color name="google_color_blue">#2673F3</color>
+    <color name="google_color_green">#009D58</color>
+    <color name="google_color_orange">#FFC607</color>
+    <color name="google_color_red">#D9442E</color>
+    <color name="status_bar_color">#C53929</color>
+    <color name="press_blue_light">#B7DFED</color>
+    <color name="click">#10000000</color>
+    <color name="click_white">#10FFFFFF</color>
+    <color name="google_color_red_click">#50D9442E</color>
+    <color name="google_color_blue_click">#502673F3</color>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+    <color name="blue">#33BCDE</color>
+    <color name="gray">#727A81</color>
+    <color name="orange">#FD6501</color>
+    <color name="gray_line">#10000000</color>
+</resources>
