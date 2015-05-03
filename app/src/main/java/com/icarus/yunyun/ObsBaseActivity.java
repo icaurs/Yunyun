@@ -131,6 +131,10 @@ public class ObsBaseActivity extends AppCompatActivity {
     }
 
     public void initToolBarTransparent(String title) {
+        SystemBarTintManager tintManager = new SystemBarTintManager(this);
+        tintManager.setStatusBarTintEnabled(true);
+        //此处可以重新指定状态栏颜色
+        tintManager.setStatusBarTintResource(R.color.google_color_red_click);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
         setSupportActionBar(toolbar);
