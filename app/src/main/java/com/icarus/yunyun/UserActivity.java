@@ -23,6 +23,7 @@ import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
 import com.github.ksoichiro.android.observablescrollview.Scrollable;
 import com.github.ksoichiro.android.observablescrollview.TouchInterceptionFrameLayout;
+import com.icarus.yunyun.fragment.UserCommentFragment;
 import com.icarus.yunyun.fragment.UserCommunityFragment;
 import com.icarus.yunyun.fragment.ViewPagerTab2GridViewFragment;
 import com.icarus.yunyun.fragment.UserArticleFragment;
@@ -247,7 +248,7 @@ public class UserActivity extends ObsBaseActivity implements ObservableScrollVie
      */
     private static class NavigationAdapter extends CacheFragmentStatePagerAdapter {
 
-        private static final String[] TITLES = new String[]{"个人简介", "我的信息", "我的社群", "我的评论", "我的收藏"};
+        private static final String[] TITLES = new String[]{"个人简介", "我的信息", "我的社群", "我的评论"};
 
         public NavigationAdapter(FragmentManager fm) {
             super(fm);
@@ -255,7 +256,7 @@ public class UserActivity extends ObsBaseActivity implements ObservableScrollVie
 
         @Override
         protected Fragment createItem(int position) {
-            Fragment f;
+            Fragment f = null;
             switch (position) {
                 case 0:
                     f = new UserIntroFragment();
@@ -267,12 +268,11 @@ public class UserActivity extends ObsBaseActivity implements ObservableScrollVie
                     f = new UserCommunityFragment();
                     break;
                 case 3:
-                    f = new ViewPagerTab2GridViewFragment();
+                    f = new UserCommentFragment();
                     break;
-                case 4:
-                default:
-                    f = new ViewPagerTab2WebViewFragment();
-                    break;
+//                default:
+//                    f = new ViewPagerTab2WebViewFragment();
+//                    break;
             }
             return f;
         }

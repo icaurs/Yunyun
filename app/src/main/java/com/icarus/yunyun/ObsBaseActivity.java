@@ -115,14 +115,14 @@ public class ObsBaseActivity extends AppCompatActivity {
     }
 
     /**
-     * ³õÊ¼»¯toolbar
+     * åˆå§‹åŒ–toolbar
      */
     public void initToolBar(String title) {
-        //Éè¶¨×´Ì¬À¸µÄÑÕÉ«£¬µ±°æ±¾´óÓÚ4.4Ê±Æğ×÷ÓÃ
+        //è®¾å®šçŠ¶æ€æ çš„é¢œè‰²ï¼Œå½“ç‰ˆæœ¬å¤§äº4.4æ—¶èµ·ä½œç”¨
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
-            //´Ë´¦¿ÉÒÔÖØĞÂÖ¸¶¨×´Ì¬À¸ÑÕÉ«
+            //æ­¤å¤„å¯ä»¥é‡æ–°æŒ‡å®šçŠ¶æ€æ é¢œè‰²
             tintManager.setStatusBarTintResource(R.color.google_color_red);
         }
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -133,7 +133,7 @@ public class ObsBaseActivity extends AppCompatActivity {
     public void initToolBarTransparent(String title) {
         SystemBarTintManager tintManager = new SystemBarTintManager(this);
         tintManager.setStatusBarTintEnabled(true);
-        //´Ë´¦¿ÉÒÔÖØĞÂÖ¸¶¨×´Ì¬À¸ÑÕÉ«
+        //æ­¤å¤„å¯ä»¥é‡æ–°æŒ‡å®šçŠ¶æ€æ é¢œè‰²
         tintManager.setStatusBarTintResource(R.color.google_color_red_click);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(title);
@@ -141,11 +141,11 @@ public class ObsBaseActivity extends AppCompatActivity {
     }
 
     public void initToolBar(String title, String subTitle) {
-        //Éè¶¨×´Ì¬À¸µÄÑÕÉ«£¬µ±°æ±¾´óÓÚ4.4Ê±Æğ×÷ÓÃ
+        //è®¾å®šçŠ¶æ€æ çš„é¢œè‰²ï¼Œå½“ç‰ˆæœ¬å¤§äº4.4æ—¶èµ·ä½œç”¨
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
-            //´Ë´¦¿ÉÒÔÖØĞÂÖ¸¶¨×´Ì¬À¸ÑÕÉ«
+            //æ­¤å¤„å¯ä»¥é‡æ–°æŒ‡å®šçŠ¶æ€æ é¢œè‰²
             tintManager.setStatusBarTintResource(R.color.google_color_red);
         }
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -155,7 +155,7 @@ public class ObsBaseActivity extends AppCompatActivity {
     }
 
     /**
-     * ·µ»Ø
+     * è¿”å›
      *
      * @author user
      */
