@@ -27,10 +27,14 @@ import com.icarus.yunyun.adapter.DrawerListAdapter;
 import com.icarus.yunyun.entity.DrawerList;
 import com.icarus.yunyun.fragment.ArticleFragment;
 import com.icarus.yunyun.fragment.CommunityFragment;
+import com.icarus.yunyun.fragment.TestFragment;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
 
 /**
  * Created by DELL on 2015/4/9.
@@ -77,6 +81,11 @@ public class MainActivity extends BaseActivity {
     private View headView;
 
     public static int community = 0;
+
+    /**
+     * 从您的应用服务器请求并获取的 Token。
+     */
+    private String Token = "Ni/jIbpy44BAB6vM7T85Qpg1odh66S9xFvHLIPtH8o0/UZpddtFVXHvstwdltcc9V2K7pkI+ZbkAPMuEfrBWnw==";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +136,28 @@ public class MainActivity extends BaseActivity {
                 initFragment(p);
             }
         }, 200);
+
+        /**
+         * IMKit SDK调用第二步，建立与服务器的连接。
+         */
+        RongIM.connect(Token, new RongIMClient.ConnectCallback() {
+            @Override
+            public void onTokenIncorrect() {
+
+            }
+
+            @Override
+            public void onSuccess(String s) {
+                //Connect 成功
+                toast(s);
+            }
+
+            @Override
+            public void onError(RongIMClient.ErrorCode errorCode) {
+                //Connect 失败
+                toast(errorCode.getMessage());
+            }
+        });
     }
 
     @Override
@@ -256,7 +287,7 @@ public class MainActivity extends BaseActivity {
     public List<Fragment> getFragments() {
         fragments.add(new ArticleFragment());
         fragments.add(new CommunityFragment());
-        fragments.add(new CommunityFragment());
+        fragments.add(new TestFragment());
         return fragments;
     }
 
