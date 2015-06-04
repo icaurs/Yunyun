@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include layout="@layout/toolbar" />
+
     <!-- 会话列表页面 Fragment -->
     <fragment
         android:layout_width="match_parent"
