@@ -14,7 +14,7 @@ public class ConversationListActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conversationlist); //加载会话列表页面 Fragment。
 
-        initToolBar("群聊");
+        initToolBar("会话列表");
         toolbar.setOnMenuItemClickListener(new ToolbarMenuItemClick());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new BackNavClick());
